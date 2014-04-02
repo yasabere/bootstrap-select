@@ -14,7 +14,19 @@ angular.module('docsIsolateScopeDirective', [])
       restrict: 'E',
       scope: {
         ngModel: '=ngModel',
-        ngOptions: '=ngOptions'
+        ngOptions: '=ngOptions',
+        container: '=container',
+        countSelectedText,'=countSelectedText',
+        dropupAuto: '=dropupAuto',
+        header: '=header',
+        hideDisabled: '=hideDisabled',
+        selectedTextFormat: '=selectedTextFormat',
+        size: '=size',
+        showSubtext: '=showSubtext',
+        showIcon: '=showIcon',
+        showContent: '=showContent',
+        title: '=title',
+        width: '=width',
       },
       template: 'my-customer-iso.html',
       link: function(scope, element, attrs, tabsCtrl) {
