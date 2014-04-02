@@ -1,6 +1,22 @@
 /*****
  *Written by Yaw Asabere
  *
+ * WORK IN PROGRESS
+ *
  */
  
-//Code Incoming!
+angular.module('bootstrap-select', [])
+  .controller('Controller', ['$scope', function($scope) {
+    $scope.name = 'Tobias';
+  }])
+  .directive('bootstrapSelect', function() {
+    return {
+      restrict: 'E',
+      transclude: true,
+      scope: {},
+      templateUrl: 'my-dialog.html',
+      link: function (scope, element) {
+        scope.name = 'Jeff';
+      }
+    };
+  });
