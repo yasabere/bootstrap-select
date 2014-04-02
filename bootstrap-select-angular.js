@@ -11,7 +11,7 @@ angular.module('bootstrapSelectDirective', [])
   }])
   .directive('bootstrapSelect', function() {
     return {
-      restrict: 'E',
+      restrict: 'AE',
       scope: {
         ngModel: '=ngModel',
         ngOptions: '=ngOptions',
@@ -30,18 +30,20 @@ angular.module('bootstrapSelectDirective', [])
       template: 'my-customer-iso.html',
       link: function(scope, element, attrs, tabsCtrl) {
         $(element).selectpicker({
-          countSelectedText: countSelectedText,
-          dropupAuto: dropupAuto,
-          header: header,
-          hideDisabled: hideDisabled,
-          selectedTextFormat: selectedTextFormat,
-          size: size,
-          showSubtext: showSubtext,
-          showIcon: showIcon,
-          showContent: showContent,
-          title: title,
-          width: width,        
+          countSelectedText: scope.countSelectedText,
+          dropupAuto: scope.dropupAuto,
+          header: scope.header,
+          hideDisabled: scope.hideDisabled,
+          selectedTextFormat: scope.selectedTextFormat,
+          size: scope.size,
+          showSubtext: scope.showSubtext,
+          showIcon: scope.showIcon,
+          showContent: scope.showContent,
+          title: scope.title,
+          width: scope.width,        
         });
+        
+        console.log('test');
 
         scope.$watch(attrs.myCurrentTime, function(value) {
           format = value;
