@@ -15,10 +15,6 @@ angular.module('docsIsolateScopeDirective', [])
       scope: {
         ngModel: '=ngModel',
         ngOptions: '=ngOptions',
-<<<<<<< HEAD
-=======
-        container: '=container',
->>>>>>> 253be9aae9db437d38506c8dabd1d98166049fc3
         countSelectedText,'=countSelectedText',
         dropupAuto: '=dropupAuto',
         header: '=header',
@@ -47,4 +43,11 @@ angular.module('docsIsolateScopeDirective', [])
           width: width,        
         });
 
-        scope.$watch(attrs.myCurrentTime,
+        scope.$watch(attrs.myCurrentTime, function(value) {
+          format = value;
+          updateTime();
+        });
+
+      },
+    };
+  });
