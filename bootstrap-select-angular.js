@@ -4,12 +4,12 @@
  * 
  */
 
-angular.module('docsIsolateScopeDirective', [])
+angular.module('bootstrapSelectDirective', [])
   .controller('Controller', ['$scope', function($scope) {
     $scope.naomi = { name: 'Naomi', address: '1600 Amphitheatre' };
     $scope.igor = { name: 'Igor', address: '123 Somewhere' };
   }])
-  .directive('myCustomer', function() {
+  .directive('bootstrapSelect', function() {
     return {
       restrict: 'E',
       scope: {
