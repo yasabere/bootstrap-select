@@ -15,7 +15,7 @@ angular.module('bootstrapSelectDirective', [])
       scope: {
         ngModel: '=ngModel',
         ngOptions: '=ngOptions',
-        countSelectedText,'=countSelectedText',
+        countSelectedText:'=countSelectedText',
         dropupAuto: '=dropupAuto',
         header: '=header',
         hideDisabled: '=hideDisabled',
@@ -30,7 +30,7 @@ angular.module('bootstrapSelectDirective', [])
       template: 'my-customer-iso.html',
       link: function(scope, element, attrs, tabsCtrl) {
         $(element).selectpicker({
-          countSelectedText,countSelectedText,
+          countSelectedText: countSelectedText,
           dropupAuto: dropupAuto,
           header: header,
           hideDisabled: hideDisabled,
