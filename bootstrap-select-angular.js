@@ -13,8 +13,14 @@ angular.module('docsIsolateScopeDirective', [])
     return {
       restrict: 'E',
       scope: {
-        customerInfo: '=info'
+        ngModel: '=ngModel',
+        ngOptions: '=ngOptions'
       },
-      template: 'my-customer-iso.html'
+      template: 'my-customer-iso.html',
+      link: function(scope, element, attrs, tabsCtrl) {
+        $('.selectpicker').selectpicker({
+          'selectedText': 'cat'
+        });
+      },
     };
   });
