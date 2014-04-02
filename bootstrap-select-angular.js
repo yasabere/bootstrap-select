@@ -15,7 +15,10 @@ angular.module('docsIsolateScopeDirective', [])
       scope: {
         ngModel: '=ngModel',
         ngOptions: '=ngOptions',
+<<<<<<< HEAD
+=======
         container: '=container',
+>>>>>>> 253be9aae9db437d38506c8dabd1d98166049fc3
         countSelectedText,'=countSelectedText',
         dropupAuto: '=dropupAuto',
         header: '=header',
@@ -30,9 +33,18 @@ angular.module('docsIsolateScopeDirective', [])
       },
       template: 'my-customer-iso.html',
       link: function(scope, element, attrs, tabsCtrl) {
-        $('.selectpicker').selectpicker({
-          'selectedText': 'cat'
+        $(element).selectpicker({
+          countSelectedText,countSelectedText,
+          dropupAuto: dropupAuto,
+          header: header,
+          hideDisabled: hideDisabled,
+          selectedTextFormat: selectedTextFormat,
+          size: size,
+          showSubtext: showSubtext,
+          showIcon: showIcon,
+          showContent: showContent,
+          title: title,
+          width: width,        
         });
-      },
-    };
-  });
+
+        scope.$watch(attrs.myCurrentTime,
